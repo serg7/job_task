@@ -1,0 +1,18 @@
+Test\RestBundle\Entity\Nodes:
+    type: entity
+    table: nodes
+    repositoryClass: Test\RestBundle\Entity\NodesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        parentId:
+            type: integer
+            column: parent_id
+        text:
+            type: string
+            length: '255'
+    lifecycleCallbacks: {  }

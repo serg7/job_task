@@ -1,0 +1,33 @@
+index:
+    pattern:  /
+    defaults: { _controller: TestRestBundle:Rest:index }
+
+generate_nodes:
+    pattern: /generate
+    defaults: { _controller: TestRestBundle:Rest:generateNodes }
+
+get_nodes_tree:
+    pattern:  /node/
+    defaults: { _controller: TestRestBundle:Rest:getNodesTree }
+
+
+
+
+
+
+
+#remove_node:
+#    pattern:  /node/remove
+#    defaults: { _controller: TestRestBundle:Rest:remove }
+#    requirements: { _format: (json), _method: POST }
+
+#create_node:
+#    pattern:  /node/create
+#    defaults: { _controller: TestRestBundle:Rest:create }
+#    requirements: { _format: (json), _method: POST }
+#
+#update_node:
+#    pattern:  /node/update
+#    defaults: { _controller: TestRestBundle:Rest:update }
+#    requirements: { _format: (json), _method: POST }
+

@@ -1,0 +1,11 @@
+imports:
+    - { resource: parameters.yml }
+
+
+#parameters:
+#     test_rest.recursion.class: Test\RestBundle\Services
+
+services:
+    recursion:
+        class: Test\RestBundle\Services\Recursion
+        arguments: [nodes, parentId]

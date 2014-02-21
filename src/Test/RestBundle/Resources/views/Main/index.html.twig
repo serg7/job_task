@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <meta charset="UTF8">
+    <link href="{{ asset('bundles/testrest/extjs/css/ext-theme-neptune-all.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset('bundles/testrest/extjs/js/ext-all.js') }}"></script>
+</head>
+<html>
+<body>
+
+
+
+<script>
+
+  (function(){
+
+        var store = Ext.create('Ext.data.TreeStore', {
+           proxy:{
+               type: 'ajax',
+               url: '{{ path('get_nodes_tree') }}'
+           }
+        });
+
+        Ext.create('Ext.tree.Panel', {
+           title: 'Nodes',
+           width: 300,
+           height: 500,
+           store: store,
+           rootVisible: false,
+           renderTo: Ext.getBody()
+        });
+
+    })();
+
+</script>
+</body>
+</html>
